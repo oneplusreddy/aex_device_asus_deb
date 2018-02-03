@@ -19,6 +19,10 @@ PRODUCT_PACKAGES := \
     rild \
     CarrierConfig \
     BasicSmsReceiver
+    
+PRODUCT_COPY_FILES += \
+    vendor/asus/deb/proprietary/lib/libril-qc-qmi-1.so:system/lib/libril-qc-qmi-1.so \
+    vendor/asus/deb/proprietary/lib/libril-qcril-hook-oem.so:system/lib/libril-qcril-hook-oem.so
 
 PRODUCT_COPY_FILES := \
     device/asus/deb/fstab.deb:root/fstab.flo \
@@ -38,8 +42,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
         persist.radio.apm_sim_not_pwdn=1
 
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-        rild.libpath=/system/lib/libril-qc-qmi-1.so
+#PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+ #       rild.libpath=/system/lib/libril-qc-qmi-1.so
 
 
 # the actual meat of the device-specific product definition
