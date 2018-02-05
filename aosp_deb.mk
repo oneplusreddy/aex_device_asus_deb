@@ -41,4 +41,4 @@ $(call inherit-product-if-exists, vendor/asus/deb/device-vendor.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1200
--include vendor/aicp/configs/bootanimation.mk
+-include vendor/aosp/configs/bootanimation.mk
